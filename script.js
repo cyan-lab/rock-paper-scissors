@@ -41,25 +41,22 @@ function playRound(humanChoice, computerChoice) {
     ) {
         humanScore++;
         return `You win! ${humanChoice} beats ${computerChoice}.`;
-    } else if (
-        (humanChoice === "rock" && computerChoice === "paper") ||
-        (humanChoice === "paper" && computerChoice === "scissors") ||
-        (humanChoice === "scissors" && computerChoice === "rock")
-    ) {
+    } else {
         computerScore++;
         return `You lose! ${computerChoice} beats ${humanChoice}.`;
     }
     
 }
 
-console.log("Your choice:");
+console.log("Your choice :");
 const humanSelection = getHumanChoice();
-console.log("Computer choice:");
+console.log("Computer choice :");
 const computerSelection = getComputerChoice();
 
 console.log(humanSelection);
 console.log(computerSelection);
-console.log("Your score: " + humanScore);
-console.log("Computer score: " + computerScore);
 
 console.log(playRound(humanSelection, computerSelection));
+
+console.log("Your score: " + humanScore);
+console.log("Computer score: " + computerScore);
